@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: a6f04455bc4acf74a9e561c380e05a0c
+guid: a75478f9c0f166b48be7d88f8ea6b79d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7269429106769222259
-    second: BlankWhite_0
+      213: 3064314791753974487
+    second: legs_1_0
   - first:
-      213: 3447852340611705810
-    second: BlankWhite_1
+      213: -18146925678628307
+    second: legs_1_1
   - first:
-      213: -3695529658821950334
-    second: BlankWhite_2
+      213: 5852946872804779406
+    second: legs_1_2
   - first:
-      213: 2677470416189408643
-    second: BlankWhite_3
+      213: -9104885121490608043
+    second: legs_1_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,7 +127,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlankWhite_0
+      name: legs_1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d85a2231ebccd1b90800000000000000
-      internalID: -7269429106769222259
+      spriteID: 7d288725112a68a20800000000000000
+      internalID: 3064314791753974487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlankWhite_1
+      name: legs_1_1
       rect:
         serializedVersion: 2
         x: 24
@@ -162,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dbe820bf6b39df20800000000000000
-      internalID: 3447852340611705810
+      spriteID: d22f82d97778fbff0800000000000000
+      internalID: -18146925678628307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlankWhite_2
+      name: legs_1_2
       rect:
         serializedVersion: 2
         x: 48
@@ -183,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2844ff4ea57d6bcc0800000000000000
-      internalID: -3695529658821950334
+      spriteID: e8523caab28d93150800000000000000
+      internalID: 5852946872804779406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlankWhite_3
+      name: legs_1_3
       rect:
         serializedVersion: 2
         x: 72
@@ -204,8 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 385469d5829482520800000000000000
-      internalID: 2677470416189408643
+      spriteID: 55020d4c833f4a180800000000000000
+      internalID: -9104885121490608043
       vertices: []
       indices: 
       edges: []
