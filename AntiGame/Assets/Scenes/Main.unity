@@ -538,6 +538,9 @@ MonoBehaviour:
   scoreText: {fileID: 2127293037}
   score: 0
   spawner: {fileID: 665081429}
+  shop: {fileID: 1163463973}
+  open: {fileID: 21300000, guid: ad2ac1441dacbf94a8a72bf1bfafd319, type: 3}
+  close: {fileID: 21300000, guid: 9b93e9d759011454c9d364d3dca16102, type: 3}
 --- !u!4 &232715269
 Transform:
   m_ObjectHideFlags: 0

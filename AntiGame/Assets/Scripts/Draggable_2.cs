@@ -61,9 +61,10 @@ public class Draggable_2 : MonoBehaviour
             transform.parent = slot.transform;
             slot = null;
             isOnSlot = false;
+            GetComponent<SpriteRenderer>().color = new Color(1, 0.8f, 0.8f);
         }
         transform.localPosition = Vector3.zero;
-        GetComponent<SpriteRenderer>().color = new Color(1, 0.8f, 0.8f);
+        
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1f);
 
     }

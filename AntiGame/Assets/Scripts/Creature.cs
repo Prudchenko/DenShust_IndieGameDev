@@ -35,6 +35,6 @@ public class Creature : MonoBehaviour
     }
     void Update()
     {
-        transform.position = new Vector3(transform.position.x - Time.deltaTime*1.5f, transform.position.y);
+        transform.position = new Vector3(transform.position.x - Time.deltaTime*2f, transform.position.y);
     }
 }

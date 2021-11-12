@@ -12,6 +12,8 @@ public class Door : MonoBehaviour
     bool passed ;
     bool isRed;
     public GameObject spawner;
+    public SpriteRenderer shop;
+    public Sprite open, close;
     void Start()
     {
         
@@ -55,6 +57,12 @@ public class Door : MonoBehaviour
             score =0;
         scoreText.text = score.ToString();
     }
+    IEnumerator OpenDoor()
+    {
+        shop.sprite = open;
+        yield return new WaitForSeconds(0.5f);
+        shop.sprite = close;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Creature"))
@@ -81,6 +89,8 @@ public class Door : MonoBehaviour
                     ChangeScore(1);
                     Debug.Log("Green  Passed");
                 }
+                StartCoroutine(OpenDoor());
+                Destroy(collision.gameObject);
             }
             else if(!passed)
             {
@@ -94,8 +104,11 @@ public class Door : MonoBehaviour
                     Debug.Log("Green  Kicked");
                     ChangeScore(-1);
                 }
+                collision.GetComponent<Animator>().Play("die", -1, 0f);
+                collision.GetComponent<Rigidbody2D>().AddForce(new Vector2(7, 5), ForceMode2D.Impulse);
+                Destroy(collision.gameObject,3f);
             }
-            Destroy(collision.gameObject);
+            
         }
     }
 }
