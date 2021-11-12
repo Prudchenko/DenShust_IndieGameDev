@@ -5,32 +5,31 @@ using UnityEngine;
 public class Creature : MonoBehaviour
 {
     public GameObject[] pieces;
+    public int[] ids;
 
-
+    Color[] colors = new Color[] { new Color(1,0.3f,0.3f), new Color(0.3f,1,0.3f), new Color(0.3f, 0.3f,1) };
     void Start()
     {
-        // StartCoroutine(Set());
         SetAppearence();
+       
     }
     void SetAppearence()
     {
-        Color color = Random.ColorHSV(0f,1f,1f,1f,1f,1f,1f,1f);
+        int colorId = Random.Range(0, 3);
+        Color color = colors[colorId];
         GetComponent<SpriteRenderer>().color = color;
+        int i = 0;
+        ids[i] = colorId;
         foreach (GameObject piece in pieces)
         {
             if(piece.name!="face")
             piece.GetComponent<SpriteRenderer>().color = color;
-            int r = Random.Range(1, 5);
-            piece.GetComponent<Animator>().Play(piece.name + r.ToString());
+            int id = Random.Range(1, 5);
+            i++;
+            ids[i] = id;
+            piece.GetComponent<Animator>().Play(piece.name + id.ToString());
         }
-    }
-
-    IEnumerator Set()
-    {
        
-        SetAppearence();
-        yield return new WaitForSeconds(0.5f);
-        StartCoroutine(Set());
     }
     void Update()
     {
