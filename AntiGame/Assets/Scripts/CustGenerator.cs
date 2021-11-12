@@ -18,7 +18,7 @@ public class CustGenerator : MonoBehaviour
 
     public void SetAppearence(Customer customer)
     {
-        Color color = colors[Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f, 1f, 1f);
+        Color color = colors[Random.Range(0,3)];
         GetComponent<SpriteRenderer>().color = color;
         for(int i = 0; i<FacesArray.Length;i++)
         {
