@@ -5,6 +5,8 @@ using UnityEngine;
 public class Creature : MonoBehaviour
 {
     public GameObject[] pieces;
+
+
     void Start()
     {
         // StartCoroutine(Set());
