@@ -11,7 +11,6 @@ public class Creature : MonoBehaviour
     void Start()
     {
         SetAppearence();
-       
     }
     void SetAppearence()
     {
@@ -19,20 +18,23 @@ public class Creature : MonoBehaviour
         Color color = colors[colorId];
         GetComponent<SpriteRenderer>().color = color;
         int i = 0;
-        ids[i] = colorId;
         foreach (GameObject piece in pieces)
         {
-            if(piece.name!="face")
-            piece.GetComponent<SpriteRenderer>().color = color;
             int id = Random.Range(1, 5);
+            ids[i] = id-1;
             i++;
-            ids[i] = id;
-            piece.GetComponent<Animator>().Play(piece.name + id.ToString());
+            piece.GetComponent<Animator>().Play(piece.name + id.ToString(),-1,0f);
         }
-       
+        GetComponent<Animator>().Play("standart", -1, 0f);
+        foreach (GameObject piece in pieces)
+        {
+            if (piece.name != "face")
+                piece.GetComponent<SpriteRenderer>().color = color;
+        }
+        ids[i] = colorId;
     }
     void Update()
     {
-        
+        transform.position = new Vector3(transform.position.x - Time.deltaTime*1.5f, transform.position.y);
     }
 }
